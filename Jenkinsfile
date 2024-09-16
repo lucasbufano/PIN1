@@ -36,10 +36,10 @@ pipeline {
           echo "Vulnerabilidades high encontradas: ${highCount}"
 
           // Condicionar el avance del pipeline
-          if (criticalCount > 10) {
+          if (criticalCount > 1) {
             error("Se encontraron más de 1 vulnerabilidad crítica. Abortando el pipeline.")
           }
-          if (highCount > 60) {
+          if (highCount > 6) {
             error("Se encontraron más de 3 vulnerabilidades high. Abortando el pipeline.")
           }
         }
